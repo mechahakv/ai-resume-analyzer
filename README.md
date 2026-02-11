@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+✅ STEP 1: Install Prerequisites
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Make sure you have:
 
-## Available Scripts
+Node.js (v16 or higher)
+Git
 
-In the project directory, you can run:
 
-### `npm start`
+Check versions:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+node -v
+npm -v
+git --version
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ STEP 2: Clone the Repository
+git clone https://github.com/your-username/ai-resume-analyzer.git
+cd ai-resume-analyzer
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+(Replace your-username with actual GitHub username)
 
-### `npm run build`
+✅ STEP 3: Install Dependencies
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Wait until installation completes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you see vulnerability warnings → you can ignore them for development.
 
-### `npm run eject`
+✅ STEP 4: Start Frontend Server
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app will run at:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+http://localhost:3000
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Open it in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🔌 If You Are Backend Developer
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Start backend server separately:
 
-### Code Splitting
+cd backend-folder
+npm install
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Backend should run on:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+http://localhost:5000
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Frontend sends POST request to:
 
-### Advanced Configuration
+http://localhost:5000/analyze
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🌿 How To Work In Team (Branch System)
 
-### Deployment
+DO NOT push directly to main.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Create a new branch:
 
-### `npm run build` fails to minify
+git checkout -b feature-yourname
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+After making changes:
+
+git add .
+git commit -m "Added feature"
+git push origin feature-yourname
+
+🛑 Common Errors & Fix
+Port 3000 already in use:
+npm start -- --port 3001
+
+Delete node_modules if broken:
+rm -rf node_modules
+npm install
+
+
+(On Windows PowerShell use:)
+
+rd /s /q node_modules
+npm install
+
+🧪 If Starting From Scratch (Full Setup Together)
+git clone https://github.com/your-username/ai-resume-analyzer.git
+cd ai-resume-analyzer
+npm install
+npm start
+
+
+Done ✅
